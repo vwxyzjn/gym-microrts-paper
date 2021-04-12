@@ -117,6 +117,7 @@ Once the agents are trained with `--prod-mode` toggled on, you can go to the exp
 This repo comes with pre-trained models at the `trained_models` directory. To run evaluation for `PPO + invalid action masking + diverse bots + IMPALA-CNN`, for example, try running
 
 ```bash
+curl -O https://microrts.s3.amazonaws.com/microrts/gym-microrts-paper/trained_models.zip &&unzip trained_models.zip
 python agent_eval.py --exp-name ppo_diverse_impala \
     --agent-model-path trained_models/ppo_diverse_impala/agent-2.pt \
     --max-steps 4000 --num-eval-runs 100 \
@@ -131,8 +132,7 @@ To see how we run all the evaluations, check out `agent_eval.sh`.
 Check out the code in the `plots` folder. Try running
 
 ```
-curl -O https://microrts.s3.amazonaws.com/microrts/gym-microrts-paper/all_data.csv && mv all_data.csv plots/all_data.csv 
-curl -O https://microrts.s3.amazonaws.com/microrts/gym-microrts-paper/trained_models.zip &&unzip trained_models.zip
+curl -O https://microrts.s3.amazonaws.com/microrts/gym-microrts-paper/all_data.csv && mv all_data.csv plots/all_data.csv
 python plot_ablation.py
 python plot_all.py
 python plot_hist.py
