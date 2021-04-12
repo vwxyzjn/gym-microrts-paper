@@ -1,4 +1,4 @@
-## Gym-μRTS: Toward Affordable DeepReinforcement Learning Research in Real-timeStrategy Games
+## Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-timeStrategy Games
 
 This repo contains the code for the paper.
 
