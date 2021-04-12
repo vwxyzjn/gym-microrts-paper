@@ -1,0 +1,7 @@
+"Name","exp_name","_wandb","charts/cumulative_match_results/win rate"
+"exp_name: ppo_diverse_impala","ppo_diverse_impala","","0.9069230556488036"
+"exp_name: ppo_diverse","ppo_diverse","","0.8246153593063354"
+"exp_name: ppo_coacai","ppo_coacai","","0.8215384483337402"
+"exp_name: ppo_coacai_partial_mask","ppo_coacai_partial_mask","","0.3176923096179962"
+"exp_name: ppo_coacai_no_mask","ppo_coacai_no_mask","","0"
+"exp_name: ppo_coacai_naive","ppo_coacai_naive","","0"
