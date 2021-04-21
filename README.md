@@ -8,6 +8,7 @@ Make sure you have `ffmpeg` and `jdk>=1.8.0` installed. Then install the depende
 
 ```bash
 git clone https://github.com/vwxyzjn/gym-microrts-paper
+cd gym-microrts-paper
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
