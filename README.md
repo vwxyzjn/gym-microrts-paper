@@ -1,6 +1,6 @@
 ## Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-time Strategy Games (CoG 2021)
 
-This repo contains the code for the paper [Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-time Strategy Games](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#macos-big-sur---automatically-load-scripting-addition-on-startup).
+This repo contains the code for the paper [Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-time Strategy Games](https://arxiv.org/abs/2105.13807).
 
 ## Get started
 
