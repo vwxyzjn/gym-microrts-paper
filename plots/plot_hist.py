@@ -34,17 +34,17 @@ if not os.path.exists("hists"):
     os.makedirs("hists")
 
 name2label = {
-    "ppo_diverse_impala": "PPO + invalid action masking \n+ diverse bots + IMPALA-CNN",
-    "ppo_diverse": "PPO + invalid action masking \n + diverse bots",
+    "ppo_diverse_impala": "PPO + invalid action masking \n+ diverse opponents + IMPALA-CNN",
+    "ppo_diverse": "PPO + invalid action masking \n + diverse opponents",
     "ppo_coacai": "PPO + invalid action masking",
     "ppo_coacai_naive": "PPO + naive invalid action masking",
     "ppo_coacai_partial_mask": "PPO + partial invalid action masking",
     "ppo_coacai_no_mask": "PPO",
-    "ppo_gridnet_selfplay_diverse_encode_decode":  "PPO + invalid action masking +\nhalf self-play / half bots + encoder-decoder",
-    "ppo_gridnet_selfplay_encode_decode":  "PPO + invalid action masking \n+ selfplay + encoder-decoder",
-    "ppo_gridnet_diverse_encode_decode": "PPO + invalid action masking \n+ diverse bots + encoder-decoder",
-    "ppo_gridnet_diverse_impala": "PPO + invalid action masking \n + diverse bots + IMPALA-CNN",
-    "ppo_gridnet_diverse": "PPO + invalid action masking \n + diverse bots",
+    "ppo_gridnet_selfplay_diverse_encode_decode": "PPO + invalid action masking +\nhalf self-play / half bots + encoder-decoder",
+    "ppo_gridnet_selfplay_encode_decode": "PPO + invalid action masking \n+ selfplay + encoder-decoder",
+    "ppo_gridnet_diverse_encode_decode": "PPO + invalid action masking \n+ diverse opponents + encoder-decoder",
+    "ppo_gridnet_diverse_impala": "PPO + invalid action masking \n + diverse opponents + IMPALA-CNN",
+    "ppo_gridnet_diverse": "PPO + invalid action masking \n + diverse opponents",
     "ppo_gridnet_coacai": "PPO + invalid action masking",
     "ppo_gridnet_coacai_naive": "PPO + naive invalid action masking",
     "ppo_gridnet_coacai_partial_mask": "PPO + partial invalid action masking",
@@ -54,22 +54,22 @@ name2label = {
 # f, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
 
 import numpy as np
-from gym_microrts import microrts_ai
+# from gym_microrts import microrts_ai
 import matplotlib.pyplot as plt
 all_ais = {
-    "randomBiasedAI": microrts_ai.randomBiasedAI,
-    # "randomAI": microrts_ai.randomAI,
-    "passiveAI": microrts_ai.passiveAI,
-    "workerRushAI": microrts_ai.workerRushAI,
-    "lightRushAI": microrts_ai.lightRushAI,
-    "coacAI": microrts_ai.coacAI,
-    "naiveMCTSAI": microrts_ai.naiveMCTSAI,
-    "mixedBot": microrts_ai.mixedBot,
-    "rojo": microrts_ai.rojo,
-    "izanagi": microrts_ai.izanagi,
-    "tiamat": microrts_ai.tiamat,
-    "droplet": microrts_ai.droplet,
-    "guidedRojoA3N": microrts_ai.guidedRojoA3N
+    "randomBiasedAI": "microrts_ai.randomBiasedAI",
+    # "randomAI": "microrts_ai.randomAI",
+    "passiveAI": "microrts_ai.passiveAI",
+    "workerRushAI": "microrts_ai.workerRushAI",
+    "lightRushAI": "microrts_ai.lightRushAI",
+    "coacAI": "microrts_ai.coacAI",
+    "naiveMCTSAI": "microrts_ai.naiveMCTSAI",
+    "mixedBot": "microrts_ai.mixedBot",
+    "rojo": "microrts_ai.rojo",
+    "izanagi": "microrts_ai.izanagi",
+    "tiamat": "microrts_ai.tiamat",
+    "droplet": "microrts_ai.droplet",
+    "guidedRojoA3N": "microrts_ai.guidedRojoA3",
 }
 ai_names, ais = list(all_ais.keys()) ,list(all_ais.values())
 n_rows, n_cols = 4, 3
@@ -83,7 +83,7 @@ for idx in range(len(all_df)):
             all_df.iloc[idx][f'charts/{ai_name}/win'],
         ])
     
-    f, axes = plt.subplots(n_rows, n_cols, figsize=(7, 9), sharex=True, sharey=True)
+    f, axes = plt.subplots(n_rows, n_cols, figsize=(10, 14), sharex=True, sharey=True)
     for i in range(len(ai_names)):
         var_name = ai_names[i]
         # if i>=1: i += 2

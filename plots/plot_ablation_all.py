@@ -11,19 +11,19 @@ name2label = {
     "exp_name: ppo_diverse_impala": "PPO + invalid action masking \n+ diverse bots + IMPALA-CNN",
     "exp_name: ppo_diverse": "PPO + invalid action masking \n + diverse bots",
     "exp_name: ppo_coacai": "PPO + invalid action masking",
-    # "exp_name: ppo_coacai_naive": "PPO + naive invalid action masking",
+    "exp_name: ppo_coacai_naive": "PPO + naive invalid action masking",
     "exp_name: ppo_coacai_partial_mask": "PPO + partial invalid action masking",
     "exp_name: ppo_coacai_no_mask": "PPO",
 }
 
 name2label2 = {
-    # "exp_name: ppo_gridnet_selfplay_diverse_encode_decode":  "PPO + invalid action masking +\nhalf self-play / half bots + encoder-decoder",
-    # "exp_name: ppo_gridnet_selfplay_encode_decode":  "PPO + invalid action masking \n+ selfplay + encoder-decoder",
     "exp_name: ppo_gridnet_diverse_encode_decode": "PPO + invalid action masking \n+ diverse bots + encoder-decoder",
     "exp_name: ppo_gridnet_diverse_impala": "PPO + invalid action masking \n + diverse bots + IMPALA-CNN",
     "exp_name: ppo_gridnet_diverse": "PPO + invalid action masking \n + diverse bots",
     "exp_name: ppo_gridnet_coacai": "PPO + invalid action masking",
-    # "exp_name: ppo_gridnet_coacai_naive": "PPO + naive invalid action masking",
+    "exp_name: ppo_gridnet_selfplay_diverse_encode_decode":  "PPO + invalid action masking +\nhalf self-play / half bots + encoder-decoder",
+    "exp_name: ppo_gridnet_selfplay_encode_decode":  "PPO + invalid action masking \n+ selfplay + encoder-decoder",
+    "exp_name: ppo_gridnet_coacai_naive": "PPO + naive invalid action masking",
     "exp_name: ppo_gridnet_coacai_partial_mask": "PPO + partial invalid action masking",
     "exp_name: ppo_gridnet_coacai_no_mask": "PPO",
 }
@@ -50,7 +50,7 @@ sns.set_context("talk")
 rs = np.random.RandomState(8)
 
 # Set up the matplotlib figure
-f, axes = plt.subplots(2, 3, figsize=(17, 10), sharey='row', sharex='col', gridspec_kw={'height_ratios': [1, 1.1]})
+f, axes = plt.subplots(2, 3, figsize=(17, 11), sharey='row', sharex='col', gridspec_kw={'height_ratios': [1, 1.6]})
 (ax1, ax2, ax3, ax4, ax5, ax6) = axes.flatten()
 
 # sns.barplot(x=x, y=y1, palette="rocket", ax=ax1)
@@ -116,7 +116,6 @@ ax4.set_xlim(right=1.2)
 for i, v in enumerate(gridnet['charts/cumulative_match_results/win rate']):
     ax4.text(max(0.05, v +0.05), i+0.2, str(round(v, 2)))
 
-
 bar5 = sns.barplot(
     data=gridnet_params,
     y=gridnet_params.index,
@@ -126,7 +125,7 @@ bar5 = sns.barplot(
     ax=ax5,
     palette=palette)
 ax5.set_title("")
-ax5.set_xlabel("Num. of Parameters\nin Model")
+ax5.set_xlabel("Parameters in Model")
 ax5.set_ylabel("")
 ax5.set_xlim(right=7300000)
 for i, v in enumerate(gridnet_params['charts/total_parameters']):
@@ -142,9 +141,9 @@ bar6 = sns.barplot(
 ax6.set_title("")
 ax6.set_xlabel("Runtime\n(Lower is Better)")
 ax6.set_ylabel("")
-ax6.set_xlim(right=180)
+ax6.set_xlim(right=270)
 for i, v in enumerate(gridnet_runtime['_runtime'] / 3600):
     ax6.text(max(0.05, v +2), i+0.2, str(round(v, 2))+"h")
 
 f.tight_layout()
-f.savefig("ablation.pdf")
+f.savefig("ablation_all.pdf")

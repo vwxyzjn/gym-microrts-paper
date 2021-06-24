@@ -1,0 +1,7 @@
+"Name","exp_name","_wandb","charts/total_parameters"
+"exp_name: ppo_diverse_impala","ppo_diverse_impala","","220175"
+"exp_name: ppo_diverse","ppo_diverse","","387247"
+"exp_name: ppo_coacai","ppo_coacai","","387247"
+"exp_name: ppo_coacai_partial_mask","ppo_coacai_partial_mask","","387247"
+"exp_name: ppo_coacai_no_mask","ppo_coacai_no_mask","","387247"
+"exp_name: ppo_coacai_naive","ppo_coacai_naive","","387247"

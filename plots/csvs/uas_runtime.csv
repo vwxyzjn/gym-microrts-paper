@@ -1,0 +1,7 @@
+"Name","exp_name","_wandb","_runtime"
+"exp_name: ppo_coacai_partial_mask","ppo_coacai_partial_mask","","179805"
+"exp_name: ppo_coacai_no_mask","ppo_coacai_no_mask","","139675.58324170113"
+"exp_name: ppo_diverse_impala","ppo_diverse_impala","","229201.56922245023"
+"exp_name: ppo_diverse","ppo_diverse","","135263.00361537933"
+"exp_name: ppo_coacai","ppo_coacai","","141125.07183241844"
+"exp_name: ppo_coacai_naive","ppo_coacai_naive","","183176"

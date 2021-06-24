@@ -23,7 +23,7 @@ if not os.path.exists("raw_data.pkl"):
     raw_data = []
     runs = api.runs("vwxyzjn/gym-microrts-paper")
     for run in runs: 
-        raw_data += [[run.config, run.history(keys=keys)]]
+        raw_data += [[run.config, run.history(keys=keys), run.summary]]
     with open('raw_data.pkl', 'wb') as handle:
         pickle.dump(raw_data, handle, protocol=pickle.HIGHEST_PROTOCOL)
 else:
@@ -39,12 +39,15 @@ name2label = {
     "ppo_coacai_naive": "PPO + naive invalid action masking",
     "ppo_coacai_partial_mask": "PPO + partial invalid action masking",
     "ppo_coacai_no_mask": "PPO",
+    "ppo_gridnet_selfplay_diverse_encode_decode": "PPO + invalid action masking +\nhalf self-play / half bots + encoder-decoder",
+    "ppo_gridnet_selfplay_encode_decode": "PPO + invalid action masking \n+ selfplay + encoder-decoder",
     "ppo_gridnet_diverse_encode_decode": "PPO + invalid action masking \n+ diverse opponents + encoder-decoder",
     "ppo_gridnet_diverse_impala": "PPO + invalid action masking \n + diverse opponents + IMPALA-CNN",
     "ppo_gridnet_diverse": "PPO + invalid action masking \n + diverse opponents",
     "ppo_gridnet_coacai": "PPO + invalid action masking",
     "ppo_gridnet_coacai_naive": "PPO + naive invalid action masking",
     "ppo_gridnet_coacai_partial_mask": "PPO + partial invalid action masking",
+    "ppo_gridnet_coacai_no_mask": "PPO",
 }
 
 # https://stackoverflow.com/questions/42281844/what-is-the-mathematics-behind-the-smoothing-parameter-in-tensorboards-scalar#_=_
