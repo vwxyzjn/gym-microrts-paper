@@ -1,12 +1,14 @@
-## Gym-μRTS: Toward Affordable DeepReinforcement Learning Research in Real-timeStrategy Games
+## Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-time Strategy Games (CoG 2021)
 
-This repo contains the code for the paper.
+This repo contains the code for the paper [Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-time Strategy Games](https://arxiv.org/abs/2105.13807).
 
 ## Get started
 
 Make sure you have `ffmpeg` and `jdk>=1.8.0` installed. Then install the dependencies:
 
 ```bash
+git clone https://github.com/vwxyzjn/gym-microrts-paper
+cd gym-microrts-paper
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
