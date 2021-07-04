@@ -16,6 +16,12 @@ pip install -r requirements.txt
 
 ## Reproduce and plot results
 
+
+### Depreciation note
+
+Note that the experiments are done with [`gym_microrts==0.3.2`](https://github.com/vwxyzjn/gym-microrts/releases/tag/v0.3.2). As we move forward beyond `v0.4.x`, we are planing to deprecate UAS despite its better performance in the paper. This is because UAS has more complex implementation and makes it really difficult to incorporate selfplay or imitation learning in the future.
+
+
 ### UAS experiments:
 PPO + invalid action masking + diverse bots + IMPALA-CNN (our best agent)
 ```bash
