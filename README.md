@@ -2,6 +2,8 @@
 
 This repo contains the code for the paper [Gym-μRTS: Toward Affordable Deep Reinforcement Learning Research in Real-time Strategy Games](https://arxiv.org/abs/2105.13807).
 
+[Full paper](https://arxiv.org/abs/2105.13807) | [Blog Post](https://wandb.ai/vwxyzjn/gym-microrts-paper/reports/Gym-RTS-Toward-Affordable-Deep-Reinforcement-Learning-Research-in-Real-Time-Strategy-Games--Vmlldzo2MDIzMTg)
+
 ## Get started
 
 Make sure you have `ffmpeg` and `jdk>=1.8.0` installed. Then install the dependencies:
