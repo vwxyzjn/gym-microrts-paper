@@ -152,3 +152,28 @@ python plot_uas_vs_gridnet.py
 
 The CSV data is obtained either through the [`wandb` export APIs](https://docs.wandb.ai/library/public-api-guide) or directly at the `wandb` dashboard such as the ["Ablation Studies" report](https://wandb.ai/vwxyzjn/gym-microrts-paper-eval/reports/Ablation-Studies--Vmlldzo1MjU2MjE)
 
+
+## Citation
+
+Please using the following bibtex entry:
+
+```bibtex
+@inproceedings{huang2021gym,
+  author    = {Shengyi Huang and
+               Santiago Onta{\~{n}}{\'{o}}n and
+               Chris Bamford and
+               Lukasz Grela},
+  title     = {Gym-{\(\mathrm{\mu}\)}RTS: Toward Affordable Full Game Real-time Strategy
+               Games Research with Deep Reinforcement Learning},
+  booktitle = {2021 {IEEE} Conference on Games (CoG), Copenhagen, Denmark, August
+               17-20, 2021},
+  pages     = {1--8},
+  publisher = {{IEEE}},
+  year      = {2021},
+  url       = {https://doi.org/10.1109/CoG52621.2021.9619076},
+  doi       = {10.1109/CoG52621.2021.9619076},
+  timestamp = {Fri, 10 Dec 2021 10:41:01 +0100},
+  biburl    = {https://dblp.org/rec/conf/cig/HuangO0G21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
